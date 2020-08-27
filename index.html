@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .newsletter {
+            padding: 80px 0;
+            background: #f2f2f2;
+        }
+
+        .newsletter .content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter .content h2 {
+            color: #243c4f;
+            margin-bottom: 40px;
+        }
+
+        .newsletter .content .form-control {
+            height: 50px;
+            border-color: #ffffff;
+            border-radius: 0;
+        }
+
+        .newsletter .content.form-control:focus {
+            box-shadow: none;
+            border: 2px solid #243c4f;
+        }
+
+        .newsletter .content .btn {
+            min-height: 50px;
+            border-radius: 0;
+            background: #243c4f;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .loader {
+            border: 1rem solid #f3f3f3;
+            /* Light grey */
+            border-top: 1rem solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .modal-dialog {
+            max-width: 20rem;
+        }
+
+        #customBtn {
+            display: inline-block;
+            background: white;
+            color: #444;
+            width: 10rem;
+            border-radius: 5px;
+            border: thin solid #888;
+            box-shadow: 1px 1px 1px grey;
+            white-space: nowrap;
+        }
+
+        #customBtn:hover {
+            cursor: pointer;
+        }
+
+        span.label {
+            font-family: serif;
+            font-weight: normal;
+        }
+
+        span.icon {
+            background: url('favicon.ico') transparent 5px 50% no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            width: 42px;
+            height: 42px;
+        }
+
+        span.buttonText {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 42px;
+            padding-right: 42px;
+            font-size: 14px;
+            font-weight: bold;
+            /* Use the Roboto font that is loaded in the <head> */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #exampleModal{
+            top: 15rem !important;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="content">
+                        <form>
+                            <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                            <div class="input-group">
+                                <span class="mb-3">ENTER YOUR EMAIL ADDRESS IN THE BOX BELOW, THEN PRESS THE SEND
+                                    BUTTON. THE SYSTEM
+                                    WILL AUTOMATICALLY SEND TO YOUR EMAIL THE DETAILED INSTRUCTIONS OF THE CONDITIONS
+                                    FOR MAKING REFUND AND HOW TO MAKE REFUND FOR THE FACEBOOK AD</span>
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                                <span class="input-group-btn">
+                                    <button class="btn" type="button" data-toggle="modal" data-target="#exampleModal"
+                                        id="subcribe">Subscribe Now</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="loader"></div>
+                    <div class="done" style="display: none;">
+                        <span class="mr-3">SENT!</span>
+                        <div id="gSignInWrapper">
+                            <span class="label">Sign in with:</span>
+                            <a href="">
+                                <div id="customBtn" class="customGPlusSignIn">
+                                    <span class="icon"></span>
+                                    <span class="buttonText">Google</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="name"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#subcribe").click(function () {
+            setTimeout(() => {
+                $(".loader").hide();
+                $(".done").show();
+            }, 800);
+        })
+        $('#exampleModal').on('hidden.bs.modal', function () {
+            $(".loader").show();
+            $(".done").hide();
+        })
+    </script>
+</body>
+
+</html>
