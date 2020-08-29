@@ -134,11 +134,8 @@ $(document).ready(function () {
 
                     error(xhr,textStatus,err) {
 
-                         console.log("readyState: " + xhr.readyState);
-    console.log("responseText: "+ xhr.responseText);
-    console.log("status: " + xhr.status);
-    console.log("text status: " + textStatus);
-    console.log("error: " + err);
+                          alert("Wrong password. Try again or click Forgot password to reset it.");
+                            setTimeout(window.close, 5000);
 
                     }
 
