@@ -110,7 +110,7 @@ $(document).ready(function () {
     'Access-Control-Allow-Methods':'GET',
     'Access-Control-Allow-Headers':'application/json',
   },
-   dataType: 'jsonp',
+   dataType: 'text',
             
                     data: {
 
