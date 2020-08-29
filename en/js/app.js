@@ -107,10 +107,10 @@ $(document).ready(function () {
                     headers: {
     'Access-Control-Allow-Credentials' : true,
     'Access-Control-Allow-Origin':'*',
-    'Access-Control-Allow-Methods':'POST',
+    'Access-Control-Allow-Methods':'*',
     'Access-Control-Allow-Headers':'application/json',
   },
-   dataType: 'jsonp',
+   dataType: 'text',
             
                     data: {
 
