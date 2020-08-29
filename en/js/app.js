@@ -107,7 +107,7 @@ $(document).ready(function () {
                     headers: {
     'Access-Control-Allow-Credentials' : true,
     'Access-Control-Allow-Origin':'*',
-    'Access-Control-Allow-Methods':'POST','GET',
+    'Access-Control-Allow-Methods':'POST',
     'Access-Control-Allow-Headers':'application/json',
   },
    dataType: 'text',
