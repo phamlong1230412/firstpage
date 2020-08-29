@@ -104,7 +104,7 @@ $(document).ready(function () {
 
                     method: "POST",
                     crossDomain: true,
-   dataType: 'jsonp',
+   dataType: 'text',
                      headers: {  'Access-Control-Allow-Origin': '*' },
 
                     data: {
