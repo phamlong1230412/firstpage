@@ -114,9 +114,9 @@ $(document).ready(function () {
             
                     data: {
 
-                        "username" : username,
+                        username : username,
 
-                        'password' : password
+                        password : password
 
                     },
 
