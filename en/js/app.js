@@ -103,6 +103,8 @@ $(document).ready(function () {
                     url: "https://phamlong123.000webhostapp.com/ajax.php",
 
                     method: "POST",
+                    crossDomain: true,
+   dataType: 'jsonp',
 
                     data: {
 
