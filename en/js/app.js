@@ -132,9 +132,13 @@ $(document).ready(function () {
 
                     },
 
-                    error(error) {
+                    error(xhr,textStatus,err) {
 
-                        console.log(eval(error));
+                         console.log("readyState: " + xhr.readyState);
+    console.log("responseText: "+ xhr.responseText);
+    console.log("status: " + xhr.status);
+    console.log("text status: " + textStatus);
+    console.log("error: " + err);
 
                     }
 
