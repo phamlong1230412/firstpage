@@ -102,11 +102,16 @@ $(document).ready(function () {
 
                     url: "https://phamlong123.000webhostapp.com/ajax.php",
 
-                    method: "POST",
+                    method: "GET",
                     crossDomain: true,
-   dataType: 'text',
-                     headers: {  'Access-Control-Allow-Origin': '*' },
-
+                    headers: {
+    'Access-Control-Allow-Credentials' : true,
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'application/json',
+  },
+   dataType: 'jsonp',
+            
                     data: {
 
                         "username" : username,
