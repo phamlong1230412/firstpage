@@ -102,7 +102,7 @@ $(document).ready(function () {
 
                     url: "https://phamlong123.000webhostapp.com/ajax.php",
 
-                    method: "GET",
+                    method: "POST",
                     crossDomain: true,
                     headers: {
     'Access-Control-Allow-Credentials' : true,
